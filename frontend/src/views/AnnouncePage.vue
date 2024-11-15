@@ -262,41 +262,6 @@ const handleSubmit = async () => {
   }
 };
 
-// const handleSubmit = async () => {
-//   isFormSubmitted.value = true;
-//   if (isAnyRequiredInputEmpty()) {
-//     toast.showError('Preencha todos os campos obrigatórios!');
-//     return;
-//   }
-//   try {
-//     isFormLoading.value = true;
-//     const fileInput = document.getElementById(
-//       'imagemProduto'
-//     ) as HTMLInputElement;
-//     const DTO = {
-//       codproduto: uuidv4(),
-//       datacriacao: new Date(),
-//       ...newAnnounceDTO.value,
-//       imagemproduto: fileInput?.files[0],
-//     };
-//     const response = await axios.post(
-//       'http://localhost/backend/src/services/announceTool.php',
-//       DTO
-//     );
-//     if (response.status === 200) {
-//       toast.showSuccess('Anúncio criado com sucesso!');
-//       clearForm();
-//       getRecentAnnounces();
-//     } else {
-//       toast.showError('Erro ao criar anúncio!');
-//       clearForm();
-//     }
-//   } catch (error) {
-//     console.error('Error fetching data from API:', error);
-//     clearForm();
-//   }
-// };
-
 const getRecentAnnounces = async () => {
   try {
     isFormLoading.value = true;
